@@ -1,0 +1,138 @@
+specificationVersion: "0.1"
+id: packagecloud-plans-pricing
+name: packagecloud Plans and Pricing
+description: >-
+  Pricing plans for packagecloud hosted private package repository service.
+  Plans are differentiated by storage capacity, bandwidth allowance, and
+  overage rates. All paid plans include unlimited collaborators and CI/CD
+  integrations.
+url: https://packagecloud.io/pricing
+plans:
+  - name: Free
+    description: >-
+      Limited free plan for individuals and small projects. Includes private
+      repositories with basic storage and bandwidth allowances.
+    url: https://packagecloud.io/pricing
+    price: 0
+    currency: USD
+    billingCycle: monthly
+    features:
+      - name: Storage
+        description: 2 GB of storage included
+        value: "2 GB"
+      - name: Bandwidth
+        description: 10 GB of data transfer included per month
+        value: "10 GB"
+      - name: Private Repositories
+        description: Private repositories supported on free plan
+        value: "true"
+      - name: Package Formats
+        description: Supports deb, rpm, gem, npm, maven, python, helm
+        value: "all"
+      - name: Collaborators
+        description: Unlimited collaborators
+        value: "unlimited"
+
+  - name: Starter
+    description: >-
+      Entry-level paid plan for small teams and projects requiring more
+      storage and bandwidth than the free tier. Includes overage options
+      for storage and bandwidth beyond included limits.
+    url: https://packagecloud.io/pricing
+    price: 89
+    currency: USD
+    billingCycle: monthly
+    features:
+      - name: Storage
+        description: 5 GB of storage included
+        value: "5 GB"
+      - name: Bandwidth
+        description: 20 GB of data transfer included per month
+        value: "20 GB"
+      - name: Storage Overage
+        description: Additional storage charged at $2 per GB over limit
+        value: "$2/GB"
+      - name: Bandwidth Overage
+        description: Additional bandwidth charged at $1.50 per GB over limit
+        value: "$1.50/GB"
+      - name: Private Repositories
+        description: Unlimited private repositories
+        value: "unlimited"
+      - name: Package Formats
+        description: Supports deb, rpm, gem, npm, maven, python, helm
+        value: "all"
+      - name: Collaborators
+        description: Unlimited collaborators
+        value: "unlimited"
+      - name: CI/CD Integrations
+        description: GitHub Actions, CircleCI, Travis CI, Jenkins, Buildkite, etc.
+        value: "true"
+
+  - name: Pro
+    description: >-
+      Professional plan for growing teams with larger storage and bandwidth
+      requirements. Lower overage rates compared to the Starter plan.
+    url: https://packagecloud.io/pricing
+    price: 150
+    currency: USD
+    billingCycle: monthly
+    features:
+      - name: Storage
+        description: 15 GB of storage included
+        value: "15 GB"
+      - name: Bandwidth
+        description: 50 GB of data transfer included per month
+        value: "50 GB"
+      - name: Storage Overage
+        description: Additional storage charged at $0.80 per GB over limit
+        value: "$0.80/GB"
+      - name: Bandwidth Overage
+        description: Additional bandwidth charged at $0.60 per GB over limit
+        value: "$0.60/GB"
+      - name: Private Repositories
+        description: Unlimited private repositories
+        value: "unlimited"
+      - name: Package Formats
+        description: Supports deb, rpm, gem, npm, maven, python, helm
+        value: "all"
+      - name: Collaborators
+        description: Unlimited collaborators
+        value: "unlimited"
+      - name: CI/CD Integrations
+        description: GitHub Actions, CircleCI, Travis CI, Jenkins, Buildkite, etc.
+        value: "true"
+
+  - name: Enterprise
+    description: >-
+      Enterprise plan for large organizations with high-volume package
+      distribution requirements. Includes generous storage and bandwidth
+      allowances with the same lower overage rates as the Pro plan.
+    url: https://packagecloud.io/pricing
+    price: 699
+    currency: USD
+    billingCycle: monthly
+    features:
+      - name: Storage
+        description: 150 GB of storage included
+        value: "150 GB"
+      - name: Bandwidth
+        description: 250 GB of data transfer included per month
+        value: "250 GB"
+      - name: Storage Overage
+        description: Additional storage charged at $0.80 per GB over limit
+        value: "$0.80/GB"
+      - name: Bandwidth Overage
+        description: Additional bandwidth charged at $0.60 per GB over limit
+        value: "$0.60/GB"
+      - name: Private Repositories
+        description: Unlimited private repositories
+        value: "unlimited"
+      - name: Package Formats
+        description: Supports deb, rpm, gem, npm, maven, python, helm
+        value: "all"
+      - name: Collaborators
+        description: Unlimited collaborators
+        value: "unlimited"
+      - name: CI/CD Integrations
+        description: GitHub Actions, CircleCI, Travis CI, Jenkins, Buildkite, etc.
+        value: "true"

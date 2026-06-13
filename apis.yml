@@ -1,0 +1,71 @@
+aid: packagecloud
+name: packagecloud
+description: >-
+  packagecloud is a hosted private package repository service with a REST API
+  for managing repositories, uploading and distributing packages across formats
+  including deb, rpm, gem, npm, maven, python, and helm charts. The API enables
+  automation of package lifecycle management, access control via tokens, GPG key
+  management, download statistics, and package promotion across repositories.
+type: Index
+image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+url: https://raw.githubusercontent.com/api-evangelist/packagecloud/refs/heads/main/apis.yml
+created: 2026-06-13
+modified: 2026-06-13
+specificationVersion: "0.19"
+tags:
+  - Package Management
+  - Repository Hosting
+  - DevOps
+  - Debian
+  - RPM
+  - RubyGems
+  - npm
+  - Maven
+  - Helm
+  - CI/CD
+apis:
+  - aid: packagecloud:packagecloud-api
+    name: packagecloud REST API
+    description: >-
+      REST API for automating common tasks for debian, rpm, rubygems, python,
+      npm, maven, and helm packages. Supports repository management, package
+      upload and deletion, access token management, GPG key management,
+      package promotion, search, and download statistics. All requests are
+      authenticated via HTTP Basic Auth using an API token over HTTPS.
+    humanURL: https://packagecloud.io/docs/api
+    baseURL: https://packagecloud.io/api/v1
+    tags:
+      - Packages
+      - Repositories
+      - Tokens
+      - GPG Keys
+      - Statistics
+    properties:
+      - type: Documentation
+        url: https://packagecloud.io/docs/api
+common:
+  - type: Website
+    url: https://packagecloud.io
+  - type: Documentation
+    url: https://packagecloud.io/docs
+  - type: GitHubOrg
+    url: https://github.com/computology
+  - type: LinkedIn
+    url: https://www.linkedin.com/company/packagecloud
+  - type: Blog
+    url: https://blog.packagecloud.io
+  - type: Pricing
+    url: https://packagecloud.io/pricing
+  - type: StatusPage
+    url: https://www.packagecloudstatus.io/
+  - type: X
+    url: https://x.com/packagecloudio
+  - type: Plans
+    url: plans/packagecloud-plans-pricing.yml
+  - type: RateLimits
+    url: rate-limits/packagecloud-rate-limits.yml
+  - type: FinOps
+    url: finops/packagecloud-finops.yml
+maintainers:
+  - FN: Kin Lane
+    email: kin@apievangelist.com

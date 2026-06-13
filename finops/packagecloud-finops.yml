@@ -1,0 +1,134 @@
+specificationVersion: "1.0"
+id: packagecloud-finops
+name: packagecloud FinOps Framework
+description: >-
+  FinOps cost management and optimization guidance for packagecloud hosted
+  package repository services. Covers cost allocation, usage optimization,
+  and governance for teams consuming packagecloud storage and bandwidth
+  resources across plans.
+url: https://packagecloud.io/pricing
+framework: FOCUS
+domains:
+  - name: Cost Allocation
+    description: >-
+      Understanding and attributing packagecloud costs across teams and projects.
+    practices:
+      - name: Repository-Level Cost Tracking
+        description: >-
+          Organize repositories by team or project to track storage and bandwidth
+          consumption at a granular level. Each repository accumulates storage
+          and download bandwidth independently, enabling chargeback or showback
+          to business units.
+        tags:
+          - chargeback
+          - showback
+          - repositories
+
+      - name: Plan Selection Alignment
+        description: >-
+          Select the appropriate plan tier based on projected storage and
+          bandwidth needs. The Free plan suits individual contributors. Starter
+          ($89/mo) is appropriate for small teams. Pro ($150/mo) for growing
+          teams. Enterprise ($699/mo) for high-volume distribution environments.
+        tags:
+          - plan-optimization
+          - rightsizing
+
+  - name: Cost Optimization
+    description: >-
+      Strategies to minimize packagecloud spend while maintaining service levels.
+    practices:
+      - name: Bandwidth Optimization
+        description: >-
+          Reduce download bandwidth costs by caching packages locally using
+          a package mirror or proxy. Uploads are free and do not count toward
+          bandwidth. Conditional GETs, HEAD requests, and cancelled downloads
+          are excluded from bandwidth calculations.
+        tags:
+          - bandwidth
+          - caching
+          - downloads
+
+      - name: Storage Cleanup
+        description: >-
+          Regularly audit and remove obsolete package versions to reduce peak
+          storage usage. Storage is billed at the peak watermark during the
+          billing cycle, so reducing stored packages mid-cycle may not
+          immediately lower costs but benefits the next billing period.
+        tags:
+          - storage
+          - cleanup
+          - retention
+
+      - name: Overage Prevention
+        description: >-
+          Monitor usage via account settings with built-in alerts at 50%,
+          90%, and 99% of plan limits. Set an overage spending cap to
+          prevent unexpected charges. Evaluate upgrading the plan tier
+          when overage charges exceed the incremental plan cost.
+        tags:
+          - overages
+          - alerts
+          - budgeting
+
+      - name: Plan Upgrade Break-Even Analysis
+        description: >-
+          Compare recurring overage costs against plan upgrade cost.
+          Starter overages are $2/GB storage and $1.50/GB bandwidth.
+          Pro/Enterprise overages are $0.80/GB storage and $0.60/GB bandwidth.
+          Upgrading from Starter to Pro ($61/mo delta) is cost-effective when
+          overage costs exceed $61/month.
+        tags:
+          - rightsizing
+          - cost-analysis
+
+  - name: Cost Visibility
+    description: >-
+      Tools and practices for gaining visibility into packagecloud consumption costs.
+    practices:
+      - name: Usage Dashboard Monitoring
+        description: >-
+          Use the packagecloud account settings usage section to monitor
+          real-time storage and bandwidth consumption. Bandwidth metrics
+          update every 5 minutes. Track trends to anticipate overage risk.
+        tags:
+          - monitoring
+          - visibility
+          - dashboards
+
+      - name: Status and Reliability Monitoring
+        description: >-
+          Monitor service availability at packagecloudstatus.io to track
+          incidents that may affect package delivery SLAs and plan
+          cost-effectiveness evaluations.
+        url: https://www.packagecloudstatus.io/
+        tags:
+          - reliability
+          - SLA
+          - status
+
+  - name: Rate and Commitment Management
+    description: >-
+      Managing committed spend and rate structures for packagecloud services.
+    practices:
+      - name: Annual Commitment Evaluation
+        description: >-
+          Evaluate whether annual billing options (if available) provide
+          savings over month-to-month pricing. Contact packagecloud sales
+          for enterprise negotiated rates for large-scale deployments.
+        tags:
+          - commitment
+          - annual-billing
+          - negotiation
+
+      - name: Overage Cap Governance
+        description: >-
+          Establish organizational policy for maximum overage cap amounts
+          per account. Configure caps in billing settings to enforce budget
+          guardrails. Accounts disabled at cap threshold require manual
+          re-enablement, so set caps at a level that allows operational
+          continuity while preventing runaway costs.
+        tags:
+          - governance
+          - budget-controls
+          - caps

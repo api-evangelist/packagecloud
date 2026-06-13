@@ -1,0 +1,70 @@
+specificationVersion: "0.1"
+id: packagecloud-rate-limits
+name: packagecloud API Rate Limits
+description: >-
+  Rate limiting information for the packagecloud REST API. The API does not
+  publish explicit rate limit thresholds in its public documentation. Limits
+  are enforced at the infrastructure level. The API uses standard HTTP response
+  codes (401 for auth failures, 422 for malformed requests) and RFC-5988
+  pagination headers to manage response size. Bandwidth and storage consumption
+  tracked at plan level with usage alerts at 50%, 90%, and 99% of limits.
+url: https://packagecloud.io/docs/api
+limits:
+  - name: API Pagination Default
+    description: >-
+      Default number of items returned per paginated API response. Can be
+      overridden with the per_page query parameter up to the maximum allowed.
+    scope: request
+    limit: 30
+    unit: items
+    notes: >-
+      Pagination is communicated via HTTP Link headers (RFC-5988), Total,
+      Per-Page, and Max-Per-Page response headers.
+
+  - name: Bandwidth Usage Alerts
+    description: >-
+      Plan-level bandwidth consumption alerts. Notifications are sent when
+      usage reaches 50%, 90%, and 99% of the monthly bandwidth allowance.
+      Bandwidth is tracked for package downloads only; uploads are free and
+      do not count toward bandwidth limits.
+    scope: account
+    unit: percent
+    thresholds:
+      - value: 50
+        action: alert
+      - value: 90
+        action: alert
+      - value: 99
+        action: alert
+    notes: >-
+      Conditional GETs, HEAD requests, and cancelled requests do not count
+      toward bandwidth. Bandwidth usage updates every 5 minutes.
+
+  - name: Storage Usage Alerts
+    description: >-
+      Plan-level storage consumption alerts. Notifications sent when
+      storage usage reaches 50%, 90%, and 99% of the plan storage limit.
+      Storage is calculated as peak usage during the billing cycle.
+    scope: account
+    unit: percent
+    thresholds:
+      - value: 50
+        action: alert
+      - value: 90
+        action: alert
+      - value: 99
+        action: alert
+    notes: >-
+      Storage watermarks represent peak usage during a billing cycle,
+      not the final stored amount at cycle end.
+
+  - name: Overage Cap
+    description: >-
+      Account holders may set a maximum overage spending cap. Once the cap
+      is reached, the account may be disabled to prevent unexpected charges.
+    scope: account
+    unit: USD
+    configurable: true
+    notes: >-
+      Overage caps can be configured in account billing settings. Exceeding
+      the cap triggers account suspension rather than continued billing.
