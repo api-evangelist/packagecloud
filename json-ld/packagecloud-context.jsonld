@@ -1,0 +1,101 @@
+{
+  "@context": {
+    "@vocab": "https://schema.org/",
+    "packagecloud": "https://packagecloud.io/vocab#",
+    "aid": "packagecloud:aid",
+    "Repository": "packagecloud:Repository",
+    "Package": "packagecloud:Package",
+    "MasterToken": "packagecloud:MasterToken",
+    "ReadToken": "packagecloud:ReadToken",
+    "GpgKey": "packagecloud:GpgKey",
+    "Distribution": "packagecloud:Distribution",
+    "PackageType": "packagecloud:PackageType",
+    "DownloadStats": "packagecloud:DownloadStats",
+    "InstallStats": "packagecloud:InstallStats",
+    "repoName": {
+      "@id": "packagecloud:repoName",
+      "@type": "xsd:string"
+    },
+    "userId": {
+      "@id": "packagecloud:userId",
+      "@type": "xsd:string"
+    },
+    "distroVersionId": {
+      "@id": "packagecloud:distroVersionId",
+      "@type": "xsd:integer"
+    },
+    "packageType": {
+      "@id": "packagecloud:packageType",
+      "@type": "xsd:string"
+    },
+    "private": {
+      "@id": "packagecloud:private",
+      "@type": "xsd:boolean"
+    },
+    "fqname": {
+      "@id": "packagecloud:fqname",
+      "@type": "xsd:string"
+    },
+    "epoch": {
+      "@id": "packagecloud:epoch",
+      "@type": "xsd:string"
+    },
+    "version": {
+      "@id": "packagecloud:version",
+      "@type": "xsd:string"
+    },
+    "release": {
+      "@id": "packagecloud:release",
+      "@type": "xsd:string"
+    },
+    "arch": {
+      "@id": "packagecloud:arch",
+      "@type": "xsd:string"
+    },
+    "downloadCount": {
+      "@id": "packagecloud:downloadCount",
+      "@type": "xsd:integer"
+    },
+    "promotionDestination": {
+      "@id": "packagecloud:promotionDestination",
+      "@type": "xsd:string"
+    },
+    "masterTokenName": {
+      "@id": "packagecloud:masterTokenName",
+      "@type": "xsd:string"
+    },
+    "readTokenName": {
+      "@id": "packagecloud:readTokenName",
+      "@type": "xsd:string"
+    },
+    "keydata": {
+      "@id": "packagecloud:keydata",
+      "@type": "xsd:string"
+    },
+    "baseURL": {
+      "@id": "packagecloud:baseURL",
+      "@type": "@id"
+    },
+    "xsd": "http://www.w3.org/2001/XMLSchema#"
+  },
+  "@graph": [
+    {
+      "@id": "packagecloud:packagecloud-api",
+      "@type": "SoftwareApplication",
+      "name": "packagecloud REST API",
+      "description": "REST API for automating common tasks for debian, rpm, rubygems, python, npm, maven, and helm packages.",
+      "url": "https://packagecloud.io/docs/api",
+      "packagecloud:baseURL": "https://packagecloud.io/api/v1",
+      "provider": {
+        "@type": "Organization",
+        "name": "packagecloud",
+        "url": "https://packagecloud.io",
+        "sameAs": [
+          "https://github.com/computology",
+          "https://x.com/packagecloudio",
+          "https://www.linkedin.com/company/packagecloud"
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,133 @@
+aid: packagecloud
+name: packagecloud API Vocabulary
+description: >-
+  Domain vocabulary for the packagecloud REST API covering package repository
+  management, package lifecycle, access control tokens, GPG keys, distributions,
+  and download statistics.
+url: https://packagecloud.io/docs/api
+created: 2026-06-13
+modified: 2026-06-13
+terms:
+  - term: repository
+    description: >-
+      A named, hosted package store belonging to a user. Identified by
+      :user_id/:repo in API paths. Can be public or private.
+    type: Resource
+    example: "myorg/stable"
+
+  - term: package
+    description: >-
+      A versioned distributable artifact uploaded to a repository. Supported
+      formats include deb, rpm, gem (RubyGems), python, npm (Node.js), maven
+      (Java), helm, and anyfile.
+    type: Resource
+
+  - term: distribution
+    description: >-
+      An OS distribution and version target for deb/rpm packages (e.g.
+      ubuntu/focal, el/8). Identified by distro_version_id in upload requests.
+    type: Resource
+
+  - term: distro_version_id
+    description: >-
+      Integer identifier for a specific distribution/version combination,
+      obtained from GET /api/v1/distributions.
+    type: Parameter
+
+  - term: master_token
+    description: >-
+      A named access-control token scoped to a repository. Acts as the parent
+      for one or more read tokens. Used to grant install/download access to
+      private repositories.
+    type: Resource
+
+  - term: read_token
+    description: >-
+      A child token under a master_token. Grants read/download access for a
+      private repository to a specific consumer.
+    type: Resource
+
+  - term: gpg_key
+    description: >-
+      A GPG public key attached to a repository used to sign and verify
+      packages. Identified by keyname.
+    type: Resource
+
+  - term: package_type
+    description: >-
+      The format of a package. Valid values: deb, rpm, gem, python, node,
+      java/maven2, helm, anyfile.
+    type: Enumeration
+    values:
+      - deb
+      - rpm
+      - gem
+      - python
+      - node
+      - java/maven2
+      - helm
+      - anyfile
+
+  - term: promote
+    description: >-
+      The action of copying a package from one repository to another within
+      the same account. Requires a destination parameter specifying the target
+      repository.
+    type: Action
+
+  - term: download_count
+    description: >-
+      The total number of times a specific package version has been downloaded.
+    type: Metric
+
+  - term: install_count
+    description: >-
+      The total number of times packages from a repository have been installed
+      (via package manager).
+    type: Metric
+
+  - term: fqname
+    description: >-
+      Fully-qualified package name as stored in packagecloud, typically
+      including epoch, version, release, and arch for rpm packages.
+    type: Attribute
+
+  - term: epoch
+    description: >-
+      RPM package epoch, used for version comparison ordering. Defaults to 0.
+    type: Attribute
+
+  - term: arch
+    description: >-
+      CPU architecture target for a package (e.g. amd64, x86_64, noarch, all).
+    type: Attribute
+
+  - term: scope
+    description: >-
+      npm package scope (e.g. @myorg) used to disambiguate scoped Node.js
+      packages during deletion.
+    type: Parameter
+
+  - term: search
+    description: >-
+      Full-text search across packages in a repository. Supports filtering by
+      package type, distribution, architecture, and pagination.
+    type: Action
+
+  - term: readme
+    description: >-
+      Markdown-formatted description text attached to a repository, displayed
+      on the repository page.
+    type: Resource
+
+  - term: license
+    description: >-
+      Enterprise license key and associated GPG signature for on-premise
+      packagecloud installations.
+    type: Resource
+
+  - term: statistics
+    description: >-
+      Aggregated download and install metrics for packages and repositories,
+      available as counts, detail records, or daily time-series.
+    type: Resource
