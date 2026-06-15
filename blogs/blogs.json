@@ -2,7 +2,7 @@
   "aid": "packagecloud",
   "url": "https://blog.packagecloud.io",
   "feed": null,
-  "fetched": "2026-06-13",
+  "fetched": "2026-06-14T20:42:17Z",
   "note": "RSS/Atom feeds return 403; posts harvested from HTML index page.",
   "posts": [
     {
@@ -53,5 +53,13 @@
       "date": "2023-05-31",
       "author": "Team Packagecloud"
     }
-  ]
+  ],
+  "repo": "packagecloud",
+  "feeds": [
+    {
+      "source": "https://www.linkedin.com/company/packagecloud",
+      "error": "HTTPError"
+    }
+  ],
+  "post_count": 0
 }
