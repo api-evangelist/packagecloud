@@ -1,65 +1,14 @@
 {
-  "aid": "packagecloud",
-  "url": "https://blog.packagecloud.io",
-  "feed": null,
-  "fetched": "2026-06-14T20:42:17Z",
-  "note": "RSS/Atom feeds return 403; posts harvested from HTML index page.",
-  "posts": [
-    {
-      "title": "What is Artifactory?",
-      "url": "https://blog.packagecloud.io/what-is-artifactory/",
-      "date": "2025-03-18",
-      "author": "Krish Sivanathan"
-    },
-    {
-      "title": "Exciting News: Packagecloud is Now Buildkite Package Registries!",
-      "url": "https://blog.packagecloud.io/packagecloud-is-now-buildkite-package-registries/",
-      "date": "2024-10-08",
-      "author": "Team Packagecloud"
-    },
-    {
-      "title": "Packagecloud partners with StackStorm to support the OSS community",
-      "url": "https://blog.packagecloud.io/packagecloud-partners-with-stackstorm-to-support-the-oss-community/",
-      "date": "2023-10-19",
-      "author": "Team Packagecloud"
-    },
-    {
-      "title": "Evolution of Rubygem index from Marshal.4.8.gz, specs.4.8.gz, latest_specs.4.8.gz, Bundler API to Compact Index",
-      "url": "https://blog.packagecloud.io/evolution-of-rubygem-index-from-marshal48gz-specs48gz-latest_specs48gz-bundler-api-to-compact-index/",
-      "date": "2023-09-21",
-      "author": "SoonHin Khor"
-    },
-    {
-      "title": "Packagecloud Private Repositories on the Free Plan",
-      "url": "https://blog.packagecloud.io/packagecloud-private-repositories-on-the-free-plan/",
-      "date": "2023-09-07",
-      "author": "Elizabeth Vo"
-    },
-    {
-      "title": "Enveil uses Packagecloud to distribute commercial software",
-      "url": "https://blog.packagecloud.io/enveil-distributes-software-using-packagecloud/",
-      "date": "2023-07-19",
-      "author": "Team Packagecloud"
-    },
-    {
-      "title": "How to Create an npm Package Ready to Distribute From Scratch",
-      "url": "https://blog.packagecloud.io/how-to-create-an-npm-package-ready-to-distribute-from-scratch/",
-      "date": "2023-06-13",
-      "author": "Krish Sivanathan"
-    },
-    {
-      "title": "Mirror, Mirror in my Software: Understanding Package and Dependency Mirroring",
-      "url": "https://blog.packagecloud.io/package-and-dependency-mirroring/",
-      "date": "2023-05-31",
-      "author": "Team Packagecloud"
-    }
-  ],
   "repo": "packagecloud",
   "feeds": [
     {
-      "source": "https://www.linkedin.com/company/packagecloud",
-      "error": "HTTPError"
+      "source": "https://blog.packagecloud.io",
+      "feed_url": "",
+      "saved": 0,
+      "method": "agent-scrape"
     }
   ],
-  "post_count": 0
+  "fetched": "2026-06-27T12:59:43Z",
+  "post_count": 0,
+  "agent_pulled": "2026-06-27"
 }
