@@ -44,6 +44,8 @@ apis:
       - type: Documentation
         url: https://packagecloud.io/docs/api
 common:
+  - type: DomainSecurity
+    url: security/packagecloud-domain-security.yml
   - type: Website
     url: https://packagecloud.io
   - type: Documentation
