@@ -46,6 +46,7 @@ tags:
   - Maven
   - Helm
   - CI/CD
+  - Developer Tools
 apis:
   - aid: packagecloud:packagecloud-api
     name: packagecloud REST API
