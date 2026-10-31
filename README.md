@@ -66,20 +66,115 @@
 
 packagecloud is a hosted private package repository service with a REST API for managing repositories, uploading and distributing packages across formats including deb, rpm, gem, npm, maven, python, and helm charts. The API enables automation of package lifecycle management, access control via tokens, GPG key management, download statistics, and package promotion across repositories.
 
-## Links
+**Areas:** Package Management · Repository Hosting · DevOps · Debian · RPM · RubyGems · npm · Maven · Helm · CI/CD · Developer Tools
+
+## packagecloud on APIs.io
+
+Everything profiled for packagecloud is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/packagecloud/](https://apis.io/providers/packagecloud/)** — or go straight to one of the APIs or properties below.
+
+### APIs (1)
+
+- [packagecloud REST API](https://apis.io/apis/packagecloud/packagecloud-api/) — REST API for automating common tasks for debian, rpm, rubygems, python, npm, maven, and helm packages. Supports repository management, package upload and…
+
+### Published properties
+
+Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
+
+#### JSON-LD (1)
+
+Linked-data contexts for the provider's vocabulary.
+
+- [Packagecloud Context](https://apis.io/jsonld/packagecloud/packagecloud-context/)
+
+#### Vocabulary (1)
+
+The provider's domain terms, defined.
+
+- [packagecloud API Vocabulary](https://apis.io/vocabularies/packagecloud/packagecloud-vocabulary/)
+
+#### Security (1)
+
+Authentication, trust centre, and vulnerability disclosure.
+
+- [Packagecloud Domain Security](https://apis.io/security/packagecloud/packagecloud-domain-security/)
+
+#### Plans and pricing (1)
+
+Published plans, tiers and prices.
+
+- [Packagecloud Plans Pricing](https://apis.io/plans/packagecloud/packagecloud-plans-pricing/)
+
+#### Rate limits (1)
+
+Published request limits.
+
+- [Packagecloud Rate Limits](https://apis.io/rate-limits/packagecloud/packagecloud-rate-limits/)
+
+#### FinOps (1)
+
+What the API costs to run, by operation.
+
+- [Packagecloud Finops](https://apis.io/finops/packagecloud/packagecloud-finops/)
+
+## Where to find this API
+
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
 
 - [Website](https://packagecloud.io)
 - [Documentation](https://packagecloud.io/docs)
-- [API Documentation](https://packagecloud.io/docs/api)
-- [GitHub Organization](https://github.com/computology)
-- [Blog](https://blog.packagecloud.io)
 - [Pricing](https://packagecloud.io/pricing)
-- [Status Page](https://www.packagecloudstatus.io/)
-- [LinkedIn](https://www.linkedin.com/company/packagecloud)
-- [X](https://x.com/packagecloudio)
+- [Blog](https://blog.packagecloud.io)
+- [Status](https://www.packagecloudstatus.io/)
 
-## APIs.json
+## API Evangelist rating
 
-This repository contains an [APIs.json](apis.yml) profile for packagecloud, following the APIs.json 0.19 specification.
+**Kin Score 19.5** — emerging · rubric 0.24.0 · scored 2026-10-17
 
-**Maintainer:** Kin Lane (kin@apievangelist.com)
+| Facet | Score |
+|---|---|
+| Discoverability | 66.1 |
+| Contract quality | 14.7 |
+| Contract governance | 0.0 |
+| Operational transparency | 28.9 |
+| Developer ergonomics | 11.9 |
+| Access clarity | 18.4 |
+
+**Agent readiness 0.6** — human-only
+
+| Agent-readiness dimension | Result |
+|---|---|
+| Spec Presence | — |
+| Agentic Access | — |
+| Reversibility Documented | — |
+| MCP Server | — |
+| Auth Clarity | — |
+| Idempotency | — |
+| Error Semantics | — |
+| OpenAPI Examples | — |
+| Rate Limit Signal | derived (partial credit) |
+| Event Surface Described | — |
+| Agent Skills | — |
+| Well Known Catalog | — |
+| Consent Identity | — |
+| Agent Card | — |
+| Dry Run Mode | — |
+| Delegated Identity | — |
+| Protected Resource Metadata | — |
+| Dynamic Client Registration | — |
+| Agentic Commerce | — |
+
+**Regulatory alignment 10.8** — Horizontal (data, software, accessibility, platform)
+
+The rubric is published at [github.com/api-evangelist/kin-score](https://github.com/api-evangelist/kin-score). The per-check breakdown behind these numbers — which checks were earned, partial or missed — along with score history and how this provider compares to its peers, is available at [apis.io/providers/packagecloud/](https://apis.io/providers/packagecloud/).
+
+## How this profile is made
+
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
+
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for packagecloud: the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
+
+## Open an issue
+
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/packagecloud/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
